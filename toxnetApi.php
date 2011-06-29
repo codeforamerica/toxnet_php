@@ -38,7 +38,7 @@ class toxnetApi extends APIBaseClass{
 			// spaces replaced with '+' signs, special char replaced with % and ASCII code		
 			$keyword = str_replace(' ','+',trim($keyword));
 			$data = self::filter_params(array('db','keyword','Stemming','and','chemsyn','second_search','gateway'),func_get_args());
-			return ($data?self::_request(self::$api_url.'/cgi-bin/sis/search', 'get',array_filter($data)):false);
+			return ($data?self::_request('/cgi-bin/sis/search/', 'GET',array_filter($data)):false);
 		}
 	
 		else
