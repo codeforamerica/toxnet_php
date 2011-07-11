@@ -1,8 +1,0 @@
-TOXNET Web Service API
-http://toxnet.nlm.nih.gov/toxnetapi/TOXNETWebService.html
-
-TOXNET API offers a RESTful Web Service API that allows users to search TOXNET databases with keywords. Using this API, software developers can smoothly integrate TOXNET data into their own applications.
-
-The TOXNET databases include chemical databases (HSDB, CCRIS, GENETOX, IRIS, ITER, and LactMed) and bibliographic databases (TOXLINE and DART). For chemical databases, this service accepts keyword searches in a specified database and returns search results in TOXNET API Response Format and full chemical records in HTML format. For bibliographic databases, this service provides keyword searches in a specified bibliographic database and returns search results with bibliographic brief records and bibliographic full records in TOXNET API Response Format. For convenience, a bibliographic full record can be returned in HTML format if requested. This service also provides query expansion with chemical synonyms and CAS Registry Number when the POST method is used.
-
-To handle large volumes of return results, this web service search starts with an initial search and is followed by subsequent requests. The initial search returns a query summary with a unique string in <TemporaryFile> tag. This unique string is used as a parameter in the subsequent requests to reference the current search. The subsequent search returns the records in a specified range.
