@@ -1,6 +1,6 @@
 <?php
 // load simple test library.. not required if simpletest is preinstalled.
-require_once('simpletest/autorun.php');
+//require_once('simpletest/autorun.php');
 // load baseclass 
 require_once('APIBaseClass.php');
 // load your class here...
