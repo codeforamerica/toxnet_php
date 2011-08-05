@@ -58,7 +58,7 @@ class toxnetApi extends APIBaseClass{
 		
 	*/
 	
-		return self::_request(self::$api_url."/cgi-bin/sis/search/g?$TemporaryFile:$n",'get');
+		return self::_request("/cgi-bin/sis/search/g?$TemporaryFile:$n",'GET');
 	}
 	
 	
@@ -71,7 +71,7 @@ class toxnetApi extends APIBaseClass{
 		DOCNO 	The record DOCNO.
 	
 	*/
-		return (in_array(strtolower($db),self::$base_options['db'])? _request(self::$api_url."/cgi-bin/sis/search/r?dbs+$db:@term+@DOCNO+$DOCNO",'get'): false);
+		return (in_array(strtolower($db),self::$base_options['db'])? _request("/cgi-bin/sis/search/r?dbs+$db:@term+@DOCNO+$DOCNO",'GET'): false);
 	}
 	
 
